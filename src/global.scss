@@ -1,0 +1,164 @@
+$primary: rgb(245, 245, 245);
+$accent: rgb(231, 231, 231);
+$accent-dark: rgb(175, 175, 175);
+$contrast: #fff;
+$text: rgb(48, 48, 48);
+$delete: rgb(211, 64, 64);
+$create: rgb(87, 141, 221);
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+
+  line-height: 1;
+
+  color: $text;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  border: none;
+
+  height: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+input {
+  background-color: $accent;
+}
+
+button {
+  color: $contrast;
+}
+
+button:hover,
+button:focus {
+  filter: brightness(12);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.item {
+  margin: 1rem 0;
+  margin-right: 1rem;
+  padding: 5px;
+  padding-left: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: $accent;
+}
+
+.remove {
+  background-color: $delete;
+  transition: all 200ms ease;
+}
+
+#delete-all {
+  width: 100%;
+  background-color: $delete;
+  transition: all 200ms ease;
+}
+
+.remove:hover,
+#delete-all:hover,
+.remove:focus,
+#delete-all:focus {
+  filter: brightness(1.1);
+}
+
+.remove:active,
+#delete-all:active {
+  filter: brightness(0.9);
+  transition: none;
+}
+
+.input-bar {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+
+  #input {
+    padding-left: 10px;
+
+    transition: all 200ms ease;
+  }
+
+  #input:hover,
+  #input:focus {
+    filter: brightness(0.9);
+  }
+
+  button {
+    background-color: $create;
+    transition: all 200ms ease;
+  }
+
+  button:hover,
+  button:focus {
+    filter: brightness(1.1);
+  }
+
+  button:active {
+    filter: brightness(0.9);
+    transition: none;
+  }
+}
+
+.items {
+  margin: 1rem 0;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.App {
+  background-color: $primary;
+  padding: 2rem;
+  margin: 0 auto;
+
+  max-width: 500px;
+}
+
+// SCROLLBAR-Y
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $accent-dark;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $text;
+  border-radius: 10px;
+}
