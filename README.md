@@ -1,2 +1,2 @@
 # JavaScript-To-do-list
-a simple practice react to do list.
+A simple React project I made to learn the useState function.
